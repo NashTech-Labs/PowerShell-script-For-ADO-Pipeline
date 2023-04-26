@@ -1,11 +1,14 @@
-# this shell script get the pipeline ID from the ADO pipeline with the hard coded token- ADO token
+# this shell script get the pipeline ID  and other configuration from the ADO pipeline 
 
+
+
+# just need to pass the few required values from the ADO like organization name, project name, pipeline name and most important PAT token
 
 # Set variables
-$organization = ""
-$project = ""
-$pipelineName = ""
-$personalAccessToken = ""
+$organization = "< >"
+$project = "< >"
+$pipelineName = "< >"
+$personalAccessToken = "< >"
 
 # Construct the REST API URL to get the pipeline ID
 $url = "https://dev.azure.com/$organization/$project/_apis/pipelines?api-version=6.1-preview.1& $filter=name eq '$pipelineName'"
